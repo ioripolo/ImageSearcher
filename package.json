@@ -1,0 +1,28 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "description": "This is my timestamp app.",
+  "main": "app.js",
+  "dependencies": {
+    "bing.search": "^1.0.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.4",
+    "passport": "^0.4.0",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioripolo/Timestamp.git"
+  },
+  "author": "Polo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ioripolo/Timestamp/issues"
+  },
+  "homepage": "https://github.com/ioripolo/Timestamp#readme"
+}

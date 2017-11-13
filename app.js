@@ -55,7 +55,7 @@ mongo.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/ImageSearchR
   
   app.route('/:query').get(function(req, res) {
     var query = req.params.query;
-    var size = req.query.size || 10;
+    var size = req.query.offset || 10;
     
     var history = {
       "term" : query,
@@ -66,17 +66,17 @@ mongo.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/ImageSearchR
     if (query !== 'favicon.ico') {
       db.collection('Histories').insert(history, (err, data) => {
         if (err) throw err;
-        console.log('Saved ' + data);
+        console.log('Saved ' + JSON.stringify(data));
       });
       
       // send request using bing image search api.
       var request_params = {
-          method : 'GET',
-          hostname : apiHost,
-          path : apiPath + '?q=' + encodeURIComponent(query) + "&count=" + size,
-          headers : {
-            'Ocp-Apim-Subscription-Key' : subscriptionKey,
-          }
+        method : 'GET',
+        hostname : apiHost,
+        path : apiPath + '?q=' + encodeURIComponent(query) + "&count=" + size,
+        headers : {
+          'Ocp-Apim-Subscription-Key' : subscriptionKey,
+        }
       };
       
       var searchReq = https.request(request_params, function(searchRes) {

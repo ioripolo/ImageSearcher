@@ -22,12 +22,66 @@ app.get("/", function(req, res) {
       2: '可以获取一个列表，显示最近几次搜索的搜索语句和返回页面地址。'
     },
     usage: {
-      0: appURL + '/lolcats%20funny?offset=10',
+      0: appURL + '/dogs?offset=2',
       1: appURL + '/latest'
     },
     result: {
-      0: '{"original_url":"http://www.baidu.com", "short_url":"' + appURL + '/4192"}',
-      1: '{"original_url":"http://www.youku.com", "short_url":"' + appURL + '/6828"}'
+      0: '[\n\
+  {\n\
+    \"url\": \"http://epilepsyu.com/wp-content/uploads/2013/03/dog-open-mouth.jpg\",\n\
+    \"snippet\": \"Do you have a dog with epilepsy? - EpilepsyU\",\n\
+    \"thumbnail\": \"https://tse4.mm.bing.net/th?id=OIP.TkkEm-k2O0C2QS8udUlLhQEcEs&pid=Api\",\n\
+    \"context\": \"http://epilepsyu.com/blog/do-you-have-a-dog-with-epilepsy/\"\n\
+  },\n\
+  {\n\
+    \"url\": \"http://thehappypuppysite.com/wp-content/uploads/2016/02/steal3.jpg\",\n\
+    \"snippet\": \"How To Stop Your Dog Stealing - The Happy Puppy Site\",\n\
+    \"thumbnail\": \"https://tse2.mm.bing.net/th?id=OIP.vjRYcVfxIpGOq0kFkPlohwEsC4&pid=Api\",\n\
+    \"context\": \"http://thehappypuppysite.com/how-to-stop-your-dog-stealing/\"\n\
+  }\n\
+]',
+      1: '[\n\
+  {\n\
+    "term": "test",\n\
+    "when": "11/13/2017, 3:20:21 AM"\n\
+  },\n\
+  {\n\
+    "term": "test",\n\
+    "when": "11/13/2017, 3:19:41 AM"\n\
+  },\n\
+  {\n\
+    "term": "test",\n\
+    "when": "11/13/2017, 3:18:30 AM"\n\
+  },\n\
+  {\n\
+    "term": "test",\n\
+    "when": "11/13/2017, 3:17:50 AM"\n\
+  },\n\
+  {\n\
+    "term": "test",\n\
+    "when": "11/13/2017, 3:15:17 AM"\n\
+  },\n\
+  {\n\
+    "term": "sexy",\n\
+    "when": "11/12/2017, 8:33:19 AM"\n\
+  },\n\
+  {\n\
+    "term": "test",\n\
+    "when": "11/12/2017, 7:55:06 AM"\n\
+  },\n\
+  {\n\
+    "term": "latest",\n\
+    "when": "11/12/2017, 6:37:53 AM"\n\
+  },\n\
+  {\n\
+    "term": "lolcats funny",\n\
+    "when": "11/12/2017, 6:36:57 AM"\n\
+  },\n\
+  {\n\
+    "term": "lolcats funny",\n\
+    "when": "11/12/2017, 6:36:03 AM"\n\
+  }\n\
+]'
     }
   });
 });
